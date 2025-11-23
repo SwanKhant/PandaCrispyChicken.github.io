@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fixed Number Multiplication</title>
+</head>
+<body>
+
+<h2>Chicken Wings Formula</h2>
+
+<p>Enter the amount in wings in kg:</p>
+
+<input type="number" id="variable" placeholder="Enter a number in kg">
+
+<button onclick="calculateWings()">Calculate Wings</button>
+
+<h3>Results:</h3>
+<ul id="results"></ul>
+
+
+
+<h2>Chicken Wings Formula For Coating</h2>
+
+<p>Enter the amount in wings in kg:</p>
+
+<input type="number" id="variable1" placeholder="Enter a number in kg">
+
+<button onclick="calculateWingsCoating()">Calculate Wings</button>
+
+<h3>Results:</h3>
+<ul id="results1"></ul>
+
+
+<!-- <h2>Chicken Nugget Formula</h2>
+
+<p>Enter the amount in Nugget in kg:</p>
+
+<input type="number" id="variable2" placeholder="Enter a number in kg">
+
+<button onclick="calculateNugget()">Calculate Nugget</button>
+
+<h3>Results:</h3>
+<ul id="results2"></ul>
+
+
+<h2>Chicken Nugget Formula For Coating</h2>
+
+<p>Enter the amount in Nugget in kg:</p>
+
+<input type="number" id="variable3" placeholder="Enter a number in kg">
+
+<button onclick="calculateNuggetCoating()">Calculate Nugget</button>
+
+<h3>Results:</h3>
+<ul id="results3"></ul> -->
+
+
+<h2>Chicken Popcorn Formula</h2>
+
+<p>Enter the amount in Popcorn in kg:</p>
+
+<input type="number" id="variable2" placeholder="Enter a number in kg">
+
+<button onclick="calculatePopCorn()">Calculate Popcorn</button>
+
+<h3>Results:</h3>
+<ul id="results2"></ul>
+
+
+<h2>Chicken Popcorn Formula For Coating</h2>
+
+<p>Enter the amount in Popcorn in kg:</p>
+
+<input type="number" id="variable3" placeholder="Enter a number in kg">
+
+<button onclick="calculatePopCornCoating()">Calculate Popcorn</button>
+
+<h3>Results:</h3>
+<ul id="results3"></ul>
+
+
+<h2>NUMBING MALA Sauce Powder</h2>
+
+<p>Enter the amount of sauce in kg:</p>
+
+<input type="number" id="variable4" placeholder="Enter a number in kg">
+
+<button onclick="calculateNumbingMalaSauce()">Calculate Mala</button>
+
+<h3>Results:</h3>
+<ul id="results4"></ul>
+
+<h2>Hot and Spicy Sauce Powder</h2>
+
+<p>Enter the amount of sauce in kg:</p>
+
+<input type="number" id="variable5" placeholder="Enter a number in kg">
+
+<button onclick="calculateHotAndSpicySauce()">Calculate Spicy</button>
+
+<h3>Results:</h3>
+<ul id="results5"></ul>
+
+
+<h2>Soy Garlice Sauce</h2>
+
+<p>Enter the amount of sauce in kg:</p>
+
+<input type="number" id="variable6" placeholder="Enter a number in kg">
+
+<button onclick="calculateSoyGarlicSauce()">Calculate Soy</button>
+
+<h3>Results:</h3>
+<ul id="results6"></ul>
+
+<h2>Honey Lemon Sauce</h2>
+
+<p>Enter the amount of sauce in kg:</p>
+
+<input type="number" id="variable7" placeholder="Enter a number in kg">
+
+<button onclick="calculateTeriyakiSauce()">Calculate Lemon</button>
+
+<h3>Results:</h3>
+<ul id="results7"></ul>
+
+<script>
+
+    const items = [
+    { name: "Ginger", value: 1 },
+    { name: "MSG", value: 3 },
+    { name: "Salt", value: 6 } ,
+    { name: "Garlic", value: 3 } ,
+    { name: "Onion", value: 3 },
+    { name: "Pepper", value: 3 }
+  ];
+
+  function calculateWings() {
+    const variable = parseFloat(document.getElementById("variable").value);
+    const resultList = document.getElementById("results");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+  const items1 = [
+    { name: "Flour", value: 250 },
+    { name: "Corn Strach", value: 30 },
+    { name: "MSG", value: 4 } ,
+    { name: "Salt", value: 4 } ,
+    { name: "Garlic", value: 2 },
+    { name: "Pepper", value: 2 },
+    { name: "Onion", value: 2 }
+  ];
+
+  function calculateWingsCoating() {
+    const variable = parseFloat(document.getElementById("variable1").value);
+    const resultList = document.getElementById("results1");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items1.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+  const items2 = [
+    { name: "Salt", value: 10 },
+    { name: "Sugar", value: 8 },
+    { name: "Pepper", value: 6 } ,
+    { name: "Garlic", value: 10 } ,
+    { name: "Paprika", value: 12 },
+    { name: "MSG", value: 6 },
+    { name: "Soy Sauce", value: 20 },
+    { name: "Water", value: 60 }
+  ];
+
+  function calculatePopCorn() {
+    const variable = parseFloat(document.getElementById("variable2").value);
+    const resultList = document.getElementById("results2");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items2.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+  const items3 = [
+    { name: "Flour", value: 300 },
+    { name: "Corn Strach", value: 100 },
+    { name: "Salt", value: 7 } ,
+    { name: "Pepper", value: 3 } ,
+    { name: "MSG", value: 5 },
+    { name: "Egg", value: 2 },
+    { name: "Water", value: 100 }
+  ];
+
+  function calculatePopCornCoating() {
+    const variable = parseFloat(document.getElementById("variable3").value);
+    const resultList = document.getElementById("results3");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items3.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+  // const items2 = [
+  //   { name: "MSG", value: 5 },
+  //   { name: "Salt", value: 8 },
+  //   { name: "Garlic", value: 3 } ,
+  //   { name: "Onion", value: 2 } ,
+  //   { name: "Pepper", value: 2 },
+  //   { name: "Corn Starch", value: 40 },
+  //   { name: "Flour", value: 30 }
+  // ];
+
+  // function calculateNugget() {
+  //   const variable = parseFloat(document.getElementById("variable2").value);
+  //   const resultList = document.getElementById("results2");
+    
+  //   resultList.innerHTML = ""; // Clear old results
+
+  //   items2.forEach(item => {
+  //     const li = document.createElement("li");
+  //     li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+  //     resultList.appendChild(li);
+  //   });
+  // }
+
+  // const items3 = [
+  //   { name: "Flour", value: 100 },
+  //   { name: "Potato Strach", value: 10 },
+  //   { name: "Corn Strach", value: 25 } ,
+  //   { name: "Salt", value: 5 } ,
+  //   { name: "MSG", value: 5 },
+  //   { name: "Paprika", value: 1 },
+  //   { name: "Water", value: 120 },
+  //   { name: "Egg", value: 1 }
+  // ];
+
+  // function calculateNuggetCoating() {
+  //   const variable = parseFloat(document.getElementById("variable3").value);
+  //   const resultList = document.getElementById("results3");
+    
+  //   resultList.innerHTML = ""; // Clear old results
+
+  //   items3.forEach(item => {
+  //     const li = document.createElement("li");
+  //     li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+  //     resultList.appendChild(li);
+  //   });
+  // }
+
+  const items4 = [
+    { name: "Penut", value: 38 },
+    { name: "Salt", value: 14 },
+    { name: "MSG", value: 18 } ,
+    { name: "Sugar", value: 6 } ,
+    { name: "ZiYa", value: 1 },
+    { name: "Shout Kaw", value: 6 },
+    { name: "Pa Kaw", value: 6 },
+    { name: "Cinnamon", value: 6 },
+    { name: "Chilli Flake", value: 18 },
+    { name: "Garlic", value: 3 },
+    { name: "Sasame", value: 4 }
+  ];
+
+  function calculateNumbingMalaSauce() {
+    const variable = parseFloat(document.getElementById("variable4").value);
+    const resultList = document.getElementById("results4");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items4.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+  const items5 = [
+    { name: "Salt", value: 15 },
+    { name: "Sugar", value: 10 },
+    { name: "MSG", value: 10 } ,
+    { name: "Paprika", value: 15 } ,
+    { name: "Chilli Flakes", value: 25 },
+    { name: "Pepper", value: 5 },
+    { name: "Garlic", value: 5 },
+    { name: "Onion", value: 5 },
+    { name: "Lime Powder", value: 9.5 }
+  ];
+
+  function calculateHotAndSpicySauce() {
+    const variable = parseFloat(document.getElementById("variable5").value);
+    const resultList = document.getElementById("results5");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items5.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+  const items6 = [
+    { name: "Light Soy", value: 80 },
+    { name: "Dark Soy", value: 160 },
+    { name: "MSG", value: 20 } ,
+    { name: "Garlic", value: 12 } ,
+    { name: "Water", value: 280 }
+  ];
+
+  function calculateSoyGarlicSauce() {
+    const variable = parseFloat(document.getElementById("variable6").value);
+    const resultList = document.getElementById("results6");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items6.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+  const items7 = [
+    { name: "Light Soy", value: 40 },
+    { name: "Dark Soy", value: 40 },
+    { name: "Sugar", value: 50 } ,
+    { name: "Honey", value: 28 } ,
+    { name: "Vinegar", value: 8 },
+    { name: "Garlic", value: 3 },
+    { name: "Ginger", value: 1.5 },
+    { name: "Water", value: 53 },
+    { name: "Corn Starch", value: 5 },
+    { name: "Water for Slurry", value: 10 },
+    { name: "MSG", value: 3 }
+  ];
+
+  function calculateTeriyakiSauce() {
+    const variable = parseFloat(document.getElementById("variable7").value);
+    const resultList = document.getElementById("results7");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items7.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+  }
+
+
+</script>
+
+</body>
+</html>
