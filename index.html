@@ -16,15 +16,25 @@
 <h3>Results:</h3>
 <ul id="results"></ul>
 
+<h2>Chicken Boneless Formula</h2>
+
+<p>Enter the amount in Boneless in kg:</p>
+
+<input type="number" id="variable2" placeholder="Enter a number in kg">
+
+<button onclick="calculatePopCorn()">Calculate Boneless</button>
+
+<h3>Results:</h3>
+<ul id="results2"></ul>
 
 
-<h2>Chicken Wings Formula For Coating</h2>
+<h2>Formula For Coating</h2>
 
-<p>Enter the amount in wings in kg:</p>
+<p>Enter the amount in kg:</p>
 
 <input type="number" id="variable1" placeholder="Enter a number in kg">
 
-<button onclick="calculateWingsCoating()">Calculate Wings</button>
+<button onclick="calculateWingsCoating()">Calculate Coating</button>
 
 <h3>Results:</h3>
 <ul id="results1"></ul>
@@ -54,19 +64,10 @@
 <ul id="results3"></ul> -->
 
 
-<h2>Chicken Popcorn Formula</h2>
-
-<p>Enter the amount in Popcorn in kg:</p>
-
-<input type="number" id="variable2" placeholder="Enter a number in kg">
-
-<button onclick="calculatePopCorn()">Calculate Popcorn</button>
-
-<h3>Results:</h3>
-<ul id="results2"></ul>
 
 
-<h2>Chicken Popcorn Formula For Coating</h2>
+
+<!-- <h2>Chicken Popcorn Formula For Coating</h2>
 
 <p>Enter the amount in Popcorn in kg:</p>
 
@@ -75,7 +76,7 @@
 <button onclick="calculatePopCornCoating()">Calculate Popcorn</button>
 
 <h3>Results:</h3>
-<ul id="results3"></ul>
+<ul id="results3"></ul> -->
 
 
 <h2>NUMBING MALA Sauce Powder</h2>
@@ -192,28 +193,28 @@
     });
   }
 
-  const items3 = [
-    { name: "Flour", value: 300 },
-    { name: "Corn Strach", value: 100 },
-    { name: "Salt", value: 7 } ,
-    { name: "Pepper", value: 3 } ,
-    { name: "MSG", value: 5 },
-    { name: "Egg", value: 2 },
-    { name: "Water", value: 100 }
-  ];
+  // const items3 = [
+  //   { name: "Flour", value: 300 },
+  //   { name: "Corn Strach", value: 100 },
+  //   { name: "Salt", value: 7 } ,
+  //   { name: "Pepper", value: 3 } ,
+  //   { name: "MSG", value: 5 },
+  //   { name: "Egg", value: 2 },
+  //   { name: "Water", value: 100 }
+  // ];
 
-  function calculatePopCornCoating() {
-    const variable = parseFloat(document.getElementById("variable3").value);
-    const resultList = document.getElementById("results3");
+  // function calculatePopCornCoating() {
+  //   const variable = parseFloat(document.getElementById("variable3").value);
+  //   const resultList = document.getElementById("results3");
     
-    resultList.innerHTML = ""; // Clear old results
+  //   resultList.innerHTML = ""; // Clear old results
 
-    items3.forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
-      resultList.appendChild(li);
-    });
-  }
+  //   items3.forEach(item => {
+  //     const li = document.createElement("li");
+  //     li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+  //     resultList.appendChild(li);
+  //   });
+  // }
 
   // const items2 = [
   //   { name: "MSG", value: 5 },
@@ -268,9 +269,10 @@
     { name: "MSG", value: 18 } ,
     { name: "Sugar", value: 6 } ,
     { name: "ZiYa or Cumin", value: 1 },
-    { name: "Star Anise", value: 6 },
-    { name: "Fennel", value: 6 },
-    { name: "Cinnamon", value: 6 },
+    { name: "Star Anise or NarNatPwint", value: 6 },
+    { name: "Fennel or SaMonSaPar", value: 6 },
+    { name: "Cinnamon or ThitGyaPoe", value: 6 },
+    { name: "Chinese Cardamom or ShawtKaw", value: 6 },
     { name: "Chilli Flake", value: 18 },
     { name: "Garlic", value: 3 },
     { name: "Sasame", value: 4 }
