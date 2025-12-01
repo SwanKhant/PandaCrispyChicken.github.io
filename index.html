@@ -16,6 +16,11 @@
 <h3>Results:</h3>
 <ul id="results"></ul>
 
+<!-- <button onclick="calculateTotalWeight()">Calculate Total Weight</button> -->
+<div id="resultsWeight"></div>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
 <h2>Chicken Boneless Formula</h2>
 
 <p>Enter the amount in Boneless in kg:</p>
@@ -27,7 +32,10 @@
 <h3>Results:</h3>
 <ul id="results2"></ul>
 
+<!-- <button onclick="calculateTotalWeight2()">Calculate Total Weight</button> -->
+<div id="resultsWeight2"></div>
 
+<!-- ///////////////////////////////////////////////////////////////////////// -->
 <h2>Formula For Coating</h2>
 
 <p>Enter the amount in kg:</p>
@@ -39,7 +47,10 @@
 <h3>Results:</h3>
 <ul id="results1"></ul>
 
+<!-- <button onclick="calculateTotalWeight1()">Calculate Total Weight</button> -->
+<div id="resultsWeight1"></div>
 
+<!-- ///////////////////////////////////////////////////////////////////////// -->
 <!-- <h2>Chicken Nugget Formula</h2>
 
 <p>Enter the amount in Nugget in kg:</p>
@@ -90,6 +101,11 @@
 <h3>Results:</h3>
 <ul id="results4"></ul>
 
+<!-- <button onclick="calculateTotalWeight4()">Calculate Total Weight</button> -->
+<div id="resultsWeight4"></div>
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
 <h2>Hot and Spicy Sauce Powder</h2>
 
 <p>Enter the amount of sauce in kg:</p>
@@ -101,6 +117,10 @@
 <h3>Results:</h3>
 <ul id="results5"></ul>
 
+<!-- <button onclick="calculateTotalWeight5()">Calculate Total Weight</button> -->
+<div id="resultsWeight5"></div>
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
 
 <h2>Soy Garlice Sauce</h2>
 
@@ -113,6 +133,11 @@
 <h3>Results:</h3>
 <ul id="results6"></ul>
 
+<!-- <button onclick="calculateTotalWeight6()">Calculate Total Weight</button> -->
+<div id="resultsWeight6"></div>
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
 <h2>Honey Lemon Sauce</h2>
 
 <p>Enter the amount of sauce in kg:</p>
@@ -123,6 +148,11 @@
 
 <h3>Results:</h3>
 <ul id="results7"></ul>
+
+<!-- <button onclick="calculateTotalWeight7()">Calculate Total Weight</button> -->
+<div id="resultsWeight7"></div>
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
 
 <script>
 
@@ -145,8 +175,21 @@
       li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
       resultList.appendChild(li);
     });
+
+    const sum = 16;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight").innerHTML = "The total is: " + weight;
   }
 
+  // function calculateTotalWeight(){
+  //   const sum = 16;
+  //   let input = Number(document.getElementById("variable").value);
+  //   const weight = sum * input;
+  //   document.getElementById("resultsWeight").innerHTML = "The result is: " + weight;
+  // }
+
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  
   const items1 = [
     { name: "Flour", value: 250 },
     { name: "Corn Strach", value: 30 },
@@ -167,8 +210,14 @@
       li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
       resultList.appendChild(li);
     });
+
+    const sum = 292;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight1").innerHTML = "The total is: " + weight;
+
   }
 
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
   const items2 = [
     { name: "Salt", value: 10 },
     { name: "Sugar", value: 8 },
@@ -176,8 +225,7 @@
     { name: "Garlic", value: 10 } ,
     { name: "Paprika", value: 12 },
     { name: "MSG", value: 6 },
-    { name: "Soy Sauce", value: 20 },
-    { name: "Water", value: 60 }
+    { name: "Soy Sauce", value: 20 }
   ];
 
   function calculatePopCorn() {
@@ -191,77 +239,13 @@
       li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
       resultList.appendChild(li);
     });
+
+    const sum = 52;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight2").innerHTML = "The total is: " + weight;
   }
 
-  // const items3 = [
-  //   { name: "Flour", value: 300 },
-  //   { name: "Corn Strach", value: 100 },
-  //   { name: "Salt", value: 7 } ,
-  //   { name: "Pepper", value: 3 } ,
-  //   { name: "MSG", value: 5 },
-  //   { name: "Egg", value: 2 },
-  //   { name: "Water", value: 100 }
-  // ];
-
-  // function calculatePopCornCoating() {
-  //   const variable = parseFloat(document.getElementById("variable3").value);
-  //   const resultList = document.getElementById("results3");
-    
-  //   resultList.innerHTML = ""; // Clear old results
-
-  //   items3.forEach(item => {
-  //     const li = document.createElement("li");
-  //     li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
-  //     resultList.appendChild(li);
-  //   });
-  // }
-
-  // const items2 = [
-  //   { name: "MSG", value: 5 },
-  //   { name: "Salt", value: 8 },
-  //   { name: "Garlic", value: 3 } ,
-  //   { name: "Onion", value: 2 } ,
-  //   { name: "Pepper", value: 2 },
-  //   { name: "Corn Starch", value: 40 },
-  //   { name: "Flour", value: 30 }
-  // ];
-
-  // function calculateNugget() {
-  //   const variable = parseFloat(document.getElementById("variable2").value);
-  //   const resultList = document.getElementById("results2");
-    
-  //   resultList.innerHTML = ""; // Clear old results
-
-  //   items2.forEach(item => {
-  //     const li = document.createElement("li");
-  //     li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
-  //     resultList.appendChild(li);
-  //   });
-  // }
-
-  // const items3 = [
-  //   { name: "Flour", value: 100 },
-  //   { name: "Potato Strach", value: 10 },
-  //   { name: "Corn Strach", value: 25 } ,
-  //   { name: "Salt", value: 5 } ,
-  //   { name: "MSG", value: 5 },
-  //   { name: "Paprika", value: 1 },
-  //   { name: "Water", value: 120 },
-  //   { name: "Egg", value: 1 }
-  // ];
-
-  // function calculateNuggetCoating() {
-  //   const variable = parseFloat(document.getElementById("variable3").value);
-  //   const resultList = document.getElementById("results3");
-    
-  //   resultList.innerHTML = ""; // Clear old results
-
-  //   items3.forEach(item => {
-  //     const li = document.createElement("li");
-  //     li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
-  //     resultList.appendChild(li);
-  //   });
-  // }
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
 
   const items4 = [
     { name: "Penut", value: 38 },
@@ -289,7 +273,14 @@
       li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
       resultList.appendChild(li);
     });
+
+    const sum = 126;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight4").innerHTML = "The total is: " + weight;
   }
+
+
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
 
   const items5 = [
     { name: "Salt", value: 15 },
@@ -314,7 +305,14 @@
       li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
       resultList.appendChild(li);
     });
+
+    const sum = 99.5;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight5").innerHTML = "The total is: " + weight;
   }
+
+
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
 
   const items6 = [
     { name: "Light Soy", value: 80 },
@@ -335,7 +333,15 @@
       li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
       resultList.appendChild(li);
     });
+
+    const sum = 552;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight6").innerHTML = "The total is: " + weight;
   }
+
+
+
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
 
   const items7 = [
     { name: "Light Soy", value: 40 },
@@ -362,8 +368,13 @@
       li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
       resultList.appendChild(li);
     });
+
+    const sum = 226.5;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight7").innerHTML = "The total is: " + weight;
   }
 
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
 
 </script>
 
