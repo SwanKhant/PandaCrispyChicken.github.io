@@ -35,7 +35,9 @@
 <!-- <button onclick="calculateTotalWeight2()">Calculate Total Weight</button> -->
 <div id="resultsWeight2"></div>
 
+
 <!-- ///////////////////////////////////////////////////////////////////////// -->
+
 <h2>Formula For Coating</h2>
 
 <p>Enter the amount in kg:</p>
@@ -51,43 +53,6 @@
 <div id="resultsWeight1"></div>
 
 <!-- ///////////////////////////////////////////////////////////////////////// -->
-<!-- <h2>Chicken Nugget Formula</h2>
-
-<p>Enter the amount in Nugget in kg:</p>
-
-<input type="number" id="variable2" placeholder="Enter a number in kg">
-
-<button onclick="calculateNugget()">Calculate Nugget</button>
-
-<h3>Results:</h3>
-<ul id="results2"></ul>
-
-
-<h2>Chicken Nugget Formula For Coating</h2>
-
-<p>Enter the amount in Nugget in kg:</p>
-
-<input type="number" id="variable3" placeholder="Enter a number in kg">
-
-<button onclick="calculateNuggetCoating()">Calculate Nugget</button>
-
-<h3>Results:</h3>
-<ul id="results3"></ul> -->
-
-
-
-
-
-<!-- <h2>Chicken Popcorn Formula For Coating</h2>
-
-<p>Enter the amount in Popcorn in kg:</p>
-
-<input type="number" id="variable3" placeholder="Enter a number in kg">
-
-<button onclick="calculatePopCornCoating()">Calculate Popcorn</button>
-
-<h3>Results:</h3>
-<ul id="results3"></ul> -->
 
 
 <h2>NUMBING MALA Sauce Powder</h2>
@@ -151,6 +116,42 @@
 
 <!-- <button onclick="calculateTotalWeight7()">Calculate Total Weight</button> -->
 <div id="resultsWeight7"></div>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
+
+<h2>Chicken Meat Ball Formula</h2>
+
+<p>Enter the amount of Meatball in kg:</p>
+
+<input type="number" id="variable8" placeholder="Enter a number in kg">
+
+<button onclick="calculateMeatball()">Calculate Meatball</button>
+
+<h3>Results:</h3>
+<ul id="results8"></ul>
+
+<!-- <button onclick="calculateTotalWeight2()">Calculate Total Weight</button> -->
+<div id="resultsWeight8"></div>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
+<h2>Chicken Sausage Formula</h2>
+
+<p>Enter the amount of Sausage in kg:</p>
+
+<input type="number" id="variable9" placeholder="Enter a number in kg">
+
+<button onclick="calculateSausage()">Calculate Sausage</button>
+
+<h3>Results:</h3>
+<ul id="results9"></ul>
+
+<!-- <button onclick="calculateTotalWeight2()">Calculate Total Weight</button> -->
+<div id="resultsWeight9"></div>
+
 
 <!-- ///////////////////////////////////////////////////////////////////////// -->
 
@@ -372,6 +373,70 @@
     const sum = 226.5;
     const weight = sum * variable;
     document.getElementById("resultsWeight7").innerHTML = "The total is: " + weight;
+  }
+
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
+
+
+  const items8 = [
+    { name: "Salt", value: 21 },
+    { name: "Potato Starch", value: 40 },
+    { name: "MSG", value: 20 } ,
+    { name: "Pepper", value: 7 } ,
+    { name: "Garlic", value: 1 },
+    { name: "Sugar", value: 32 },
+    { name: "Ice water", value: 100 },
+    { name: "Egg", value: 18 }
+  ];
+
+  function calculateMeatball() {
+    const variable = parseFloat(document.getElementById("variable8").value);
+    const resultList = document.getElementById("results8");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items8.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+
+    const sum = 100;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight8").innerHTML = "The total without Salt, water and egg is: " + weight;
+  }
+
+  // <!-- ///////////////////////////////////////////////////////////////////////// -->
+
+
+  const items9 = [
+    { name: "Marinate Salt", value: 21 },
+    { name: "Potato Starch", value: 35 },
+    { name: "MSG", value: 20 } ,
+    { name: "Sugar", value: 23 } ,
+    { name: "Salt", value: 1 },
+    { name: "Pepper", value: 4 },
+    { name: "Paprika", value: 5 },
+    { name: "Oyster Sauce", value: 20 },
+    { name: "Ice Water", value: 180 },
+    { name: "Egg", value: 25 }
+  ];
+
+  function calculateSausage() {
+    const variable = parseFloat(document.getElementById("variable9").value);
+    const resultList = document.getElementById("results9");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items9.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+
+    const sum = 88;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight9").innerHTML = "The total without Marinate Salt, oyster sater, water and egg is: " + weight;
   }
 
   // <!-- ///////////////////////////////////////////////////////////////////////// -->
