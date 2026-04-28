@@ -138,6 +138,23 @@
 
 <!-- ///////////////////////////////////////////////////////////////////////// -->
 
+<h2>Spicy Chicken Meat Ball Formula</h2>
+
+<p>Enter the amount of Meatball in kg:</p>
+
+<input type="number" id="variable10" placeholder="Enter a number in kg">
+
+<button onclick="calculateSpicyMeatball()">Calculate Spicy Meatball</button>
+
+<h3>Results:</h3>
+<ul id="results10"></ul>
+
+<!-- <button onclick="calculateTotalWeight2()">Calculate Total Weight</button> -->
+<div id="resultsWeight10"></div>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
 <h2>Chicken Sausage Formula</h2>
 
 <p>Enter the amount of Sausage in kg:</p>
@@ -385,6 +402,7 @@
     { name: "Pepper", value: 7 } ,
     { name: "Garlic", value: 1 },
     { name: "Sugar", value: 32 },
+    { name: "Salt Powder", value: 15 },
     { name: "Ice water", value: 100 },
     { name: "Egg", value: 18 }
   ];
@@ -401,11 +419,45 @@
       resultList.appendChild(li);
     });
 
-    const sum = 100;
+    const sum = 115;
     const weight = sum * variable;
     document.getElementById("resultsWeight8").innerHTML = "The total without Salt, water and egg is: " + weight;
   }
 
+
+    // <!-- ///////////////////////////////////////////////////////////////////////// -->
+
+
+  const items10 = [
+    { name: "Salt", value: 21 },
+    { name: "Potato Starch", value: 40 },
+    { name: "MSG", value: 20 } ,
+    { name: "Pepper", value: 7 } ,
+    { name: "Garlic", value: 1 },
+    { name: "Sugar", value: 32 },
+    { name: "Salt Powder", value: 15 },
+    { name: "Paprika", value: 10 },
+    { name: "Ice water", value: 100 },
+    { name: "Egg", value: 18 },
+    { name: "Noodle", value: 160 }
+  ];
+
+  function calculateSpicyMeatball() {
+    const variable = parseFloat(document.getElementById("variable10").value);
+    const resultList = document.getElementById("results10");
+    
+    resultList.innerHTML = ""; // Clear old results
+
+    items8.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.name + " (" + item.value + ") × " + variable + " = " + (item.value * variable) + " g";
+      resultList.appendChild(li);
+    });
+
+    const sum = 115;
+    const weight = sum * variable;
+    document.getElementById("resultsWeight8").innerHTML = "The total without Salt, water and egg is: " + weight;
+  }
   // <!-- ///////////////////////////////////////////////////////////////////////// -->
 
 
